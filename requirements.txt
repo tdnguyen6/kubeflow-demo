@@ -6,3 +6,7 @@ kfp
 boto3
 matplotlib
 seaborn
+kubeflow-katib
+nltk
+wordcloud
+kserve

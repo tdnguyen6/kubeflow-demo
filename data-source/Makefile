@@ -1,5 +1,5 @@
 start:
-	jupyter notebook --ip 0.0.0.0 --port 3010
+	uvicorn server:app --reload
 
 pip:
 	pip install -r requirements.txt

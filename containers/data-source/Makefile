@@ -1,11 +1,11 @@
-IMAGE_NAME=kubeflow-demo-dev
+IMAGE_NAME=kubeflow-demo-data-source
 CONTAINER_NAME=$(IMAGE_NAME)-1
 SHELL=zsh
 
 create: build rm
 	docker run -itd --name $(CONTAINER_NAME) \
 		-v $(HOME):/home/user \
-		-p 3010-3020:3010-3020 $(IMAGE_NAME)
+		-p 3021:3021 $(IMAGE_NAME)
 shell: start
 	docker exec -it -w $$(sed "s/$$USER/user/g" <<< $$PWD/../..) $(CONTAINER_NAME) $(SHELL)
 stop:

@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: tweet-sentiment-analysis-
+  annotations: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.11, pipelines.kubeflow.org/pipeline_compilation_time: '2022-03-11T07:07:59.171810',
+    pipelines.kubeflow.org/pipeline_spec: '{"name": "Tweet sentiment analysis"}'}
+  labels: {pipelines.kubeflow.org/kfp_sdk_version: 1.8.11}
+spec:
+  entrypoint: tweet-sentiment-analysis
+  templates:
+  - name: tweet-sentiment-analysis
+    dag:
+      tasks: []
+  arguments:
+    parameters: []
+  serviceAccountName: pipeline-runner
